@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; connect-src 'self'; base-uri 'none'; form-action 'none'">
+<title>Admin guide · Fattakse Guide</title>
+<link rel="icon" href="../assets/icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../assets/app.css?v=1fd24f807a">
+<script src="../assets/app.js?v=1fd24f807a" defer></script>
+</head>
+<body data-section="admin">
+<p id="boot" class="boot">Opening the guide…</p>
+<noscript><p class="boot">Please turn on JavaScript to open the guide.</p></noscript>
+
+<div id="lock" class="lock" hidden>
+  <form id="lock-form" class="card">
+    <a class="back" href="../">← Fattakse Guide</a>
+    <h1>Admin guide</h1>
+    <p class="muted">For the owner and the admin team only.</p>
+    <input type="text" name="username" autocomplete="username" value="fattakse-guide-admin" readonly hidden>
+    <label for="pw">Password</label>
+    <div class="pw-row">
+      <input id="pw" name="password" type="password" autocomplete="current-password" autocapitalize="none" autocorrect="off" spellcheck="false" required>
+      <button type="button" id="pw-show" class="btn-ghost">Show</button>
+    </div>
+    <label class="check"><input type="checkbox" id="remember"> Remember on this device</label>
+    <button type="submit" id="unlock" class="btn">Open the guide</button>
+    <p id="lock-msg" class="msg" role="alert"></p>
+  </form>
+</div>
+
+<div id="app" hidden>
+  <header class="top">
+    <button type="button" id="menu-btn" class="icon-btn" aria-label="Menu">☰</button>
+    <a class="brand" href="#/">Fattakse Guide <span class="tag"></span></a>
+    <input id="search" type="search" placeholder="Search" aria-label="Search the guide" autocomplete="off">
+    <button type="button" id="lock-btn" class="btn-ghost" title="Lock the guide on this device">Lock</button>
+  </header>
+  <div id="scrim" class="scrim"></div>
+  <nav id="nav" class="nav" aria-label="Guide pages"></nav>
+  <main class="main">
+    <article id="page" class="page"></article>
+    <nav id="pager" class="pager" aria-label="Previous and next page"></nav>
+    <footer id="foot" class="foot"></footer>
+  </main>
+</div>
+<div id="lightbox" class="lightbox" hidden></div>
+</body>
+</html>
