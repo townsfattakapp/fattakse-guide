@@ -1,4 +1,4 @@
-// Fattakse Guide viewer: unlocks the encrypted guide in the browser and shows it.
+// FattakSe Guide viewer: unlocks the encrypted guide in the browser and shows it.
 // Files written by build_site.py: data/k.json = PBKDF2 salt and iterations; data/m.bin = menu and search
 // text; data/<id>.bin = one page; data/i/<id>.bin = one picture. Every .bin is IV (12 bytes) + AES-256-GCM.
 'use strict';
@@ -73,7 +73,7 @@
     $('app').hidden = false;
     document.querySelector('.top .tag').textContent = manifest.label;
     buildNav();
-    $('foot').textContent = `Updated ${manifest.built}. For the Fattakse team only: do not share the password outside the team.`;
+    $('foot').textContent = `Updated ${manifest.built}. For the FattakSe team only: do not share the password outside the team.`;
     route();
   }
 
@@ -112,7 +112,7 @@
 
   async function showPage(id, anchor) {
     const meta = manifest.pages[id];
-    document.title = `${meta.t} · Fattakse Guide`;
+    document.title = `${meta.t} · FattakSe Guide`;
     for (const link of $('nav').querySelectorAll('a')) {
       if (link.dataset.id === id) link.setAttribute('aria-current', 'page');
       else link.removeAttribute('aria-current');
